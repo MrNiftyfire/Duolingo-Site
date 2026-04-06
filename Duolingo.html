@@ -33,26 +33,12 @@ Hit that follow and let’s conquer languages together — one haunted streak at
 </head>
 <audio id="bg-music" loop>
   <source src="Bring My Parents Back - Duolingo.mp3" type="audio/mpeg">
+  <script src="Javascriptduo.js" defer></script>
 </audio>
 
 <button id="music-toggle">
   🎵 Play Music
 </button>
-
-<script>
-  const music = document.getElementById("bg-music");
-  const toggleBtn = document.getElementById("music-toggle");
-
-  toggleBtn.addEventListener("click", () => {
-    if (music.paused) {
-      music.play();
-      toggleBtn.innerText = "🔇 Pause Music";
-    } else {
-      music.pause();
-      toggleBtn.innerText = "🎵 Play Music";
-    }
-  });
-</script>
 <body>
 
   <div class="top-menu">
@@ -112,23 +98,6 @@ Hit that follow and let’s conquer languages together — one haunted streak at
       </ul>
     </details>
   </div>
-
-  <script>
-    // Accordion: only one open at a time
-    const details = document.querySelectorAll("details");
-    details.forEach((targetDetail) => {
-      targetDetail.addEventListener("toggle", () => {
-        if (targetDetail.open) {
-          details.forEach((detail) => {
-            if (detail !== targetDetail) {
-              detail.open = false;
-            }
-          });
-        }
-      });
-    });
-  </script>
-
 </body>
 </html>
 </center>
